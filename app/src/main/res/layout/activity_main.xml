@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="ViewModel"
+            type="com.example.jetcktraining.MainActivity"
+            />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="264dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/nyam" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="51dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="39dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/menu" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <SearchView
+                    android:layout_width="match_parent"
+                    android:layoutDirection="rtl"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/activity_content_main"
+                    layout="@layout/content_main"
+                    bind:ViewModel = "@{ViewModel}"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</layout>
+
